@@ -1,0 +1,151 @@
+/*position property*/
+.parent-container {
+    background-color: beige;
+    border: 2px solid black;
+    width: 75vw;
+    height: 50vw;
+    /* increase height to 175vw to see scroll height*/
+    padding:5px
+    font-family: Arial, Helvetica, sans-serif;
+
+    position: relative;
+    /* caused absolute container to position inside parent container */
+}
+
+.child {
+    padding:25px
+}
+
+.child1 {
+    border: 2px solid red;
+    background-color:red
+    right: 25px;
+
+}
+
+.child2 {
+    border: 2px solid blueviolet
+    background-color: blueviolet
+
+    position: relative;
+
+    left: 0px;
+    top: 0px;
+    /*move 15px away from its static position*/
+}
+
+.child3 {
+    border: 2px solid green;
+    background-color: green;
+
+    position: absolute;
+
+    top: 0;
+    left: 0
+    /*move it to upper left corner or viewport (body) */
+    /* caused by parent container being static */
+}
+.child4 {
+    border: 2px solid teal;
+    background-color: teal;
+
+    position: fixed;
+    /*keeps element in same place even when scrolling */
+}
+
+.child5 {
+    border: 2px solid gray;
+    background-color: gray;
+
+    position: sticky;
+    /*like relative */
+    top: 0px;
+    /**/
+}
+/*
+css position property
+
+? Static
+*default
+*positioned in relation to elements
+*top,bottom,left,right, z-index have no effect
+*values are relative to its original static position
+i dont use it breaks the flow
+
+?absolute
+*removes element from the flow
+*positions it relative to parent container
+*if parent is static, it will move outside of parent container
+*if parent is relative, it will move within parent container
+*positioning defined by top, bottom, left, right, z-index
+
+?Fixed
+*like absoulte
+*positioned to viewport
+*doesn't nove when scrolling
+*positioning defied by top, bottom, left, right, z-index
+
+?sticky
+*mix of relative and fixed
+*relative to the flow
+*position definition used for when you start scrolling
+*stay fixed when scrolling; relative when stationary
+
+*/
+
+/* Display property*/
+
+/*
+display property
+
+    *treats an element as block or inline
+    *blocks are created top-to-bottom
+    *inline are positioned side-by-side
+*/
+
+.display-container {
+    margin-top: 2em;
+}
+
+.block-container {
+    border: 2px solid black;
+    margin: 5px;
+}
+
+.inline-element {
+    margin: 5px;
+    display: block;
+}
+
+.inline-block {
+    border: 2px solid black
+    margin: 5px;
+}
+
+/*Initially a block */
+/*display: inline; */
+/* acts like an inline */
+
+display: inline-block;
+width: 125px;
+/*Allows us to set the width and height of inline */
+}
+
+/*This*/
+/**/
+
+float-container {
+    margin-top: 2em;
+    border: 2px solid blue;
+    height: 20vw;
+}
+
+.float-box {
+    margin: 5px;
+    border: 2px solid orange;
+    background-color: orange;
+    width: 50px;
+    height: 50px;
+}
+float: right;
+/* shifts elements from left to right */
